@@ -2,7 +2,9 @@
   "name": "nxt-movie",
   "version": "0.1.0",
   "private": true,
-  "author": {"name": "Darian"},
+  "author": {
+    "name": "Darian"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
