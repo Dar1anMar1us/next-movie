@@ -1,0 +1,14 @@
+.cardLink {
+    max-height: 1000px;
+}
+
+.cardDescription {
+    max-height: 150px;
+    font-size: smaller;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+}

@@ -9,7 +9,7 @@ const Movies = ({ movies }: { movies: any[] }) => {
         useMoviesStore.getState().setMovies(movies)
     }, [movies])
 
-    // console.log(movies)
+    console.log(movies)
 
     return (
         <div>
@@ -25,11 +25,12 @@ const Movies = ({ movies }: { movies: any[] }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
                 {movies ? (
                     filteredMovies.map((movie: any) => {
-                    const { id, title, overview, poster_path } = movie;
+                    const { id, title, name, overview, poster_path } = movie;
                     return (
                         <MovieCard
                             key={id}
-                            title={title}
+                            movieId={id}
+                            title={title ? title : name}
                             overview={overview}
                             poster_path={
                                 "https://image.tmdb.org/t/p/original" + poster_path

@@ -2,9 +2,8 @@ import Link from 'next/link'
 import navStyles from '../styles/Nav.module.css'
 
 const Nav = () => {
-  const {nav} = navStyles
   return (
-    <nav className={nav}>
+    <nav className={navStyles.nav}>
       <ul>
         <li>
           <Link href='/'>Home</Link>
