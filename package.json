@@ -10,7 +10,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "test": "cypress run --headless --config baseUrl=http://127.0.0.1:3000",
+    "test:components": "cypress run --component",
+    "test-ui": "cypress open --config baseUrl=http://127.0.0.1:3000"
   },
   "dependencies": {
     "@types/node": "18.11.9",
