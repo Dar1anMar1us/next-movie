@@ -20,7 +20,7 @@ const MovieCard: FC<MovieCardProps> = (props) => {
         .join("-")
 
     return (
-        <Link href={`/movies/${slug}`} onClick={() => useMoviesStore.getState().setCurrentMovieId(movieId)} className={styles.cardLink}>
+        <Link href={`/movies/${movieId}`} onClick={() => useMoviesStore.getState().setCurrentMovieId(movieId)} className={styles.cardLink}>
             <div className="max-w-sm bg-white mx-auto rounded-lg border border-gray-200 shadow-md hover:-translate-y-4 duration-200 hover:animate-pulse">
                 <img
                     src={poster_path}
