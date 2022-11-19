@@ -1,12 +1,12 @@
-import Nav from './Nav'
-import Meta from './Meta'
-import Header from './Header'
-import styles from '../styles/Layout.module.css'
-import { useRouter } from 'next/router'
+import Nav from "./Nav";
+import Meta from "./Meta";
+import Header from "./Header";
+import styles from "../styles/Layout.module.css";
+import { useRouter } from "next/router";
 
 const Layout = ({ children }: any) => {
-  const router = useRouter()
-  const notWithHeader = ["movies", "about"]
+  const router = useRouter();
+  const notWithHeader = ["movies", "about"];
   return (
     <>
       <Meta />
@@ -18,7 +18,7 @@ const Layout = ({ children }: any) => {
         </main>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

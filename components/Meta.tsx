@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 const Meta = ({ title, keywords, description }: any) => {
   return (
@@ -10,13 +10,13 @@ const Meta = ({ title, keywords, description }: any) => {
       <link rel='icon' href='/favicon.ico' />
       <title>{title}</title>
     </Head>
-  )
-}
+  );
+};
 
 Meta.defaultProps = {
-  title: 'NextJS Movies App',
-  keywords: 'MovieDB, programming, NextJS',
-  description: 'This is a test project for Darian Chirca',
-}
+  title: "NextJS Movies App",
+  keywords: "MovieDB, programming, NextJS",
+  description: "This is a test project for Darian Chirca",
+};
 
-export default Meta
+export default Meta;
