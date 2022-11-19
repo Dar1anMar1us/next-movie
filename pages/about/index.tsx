@@ -1,6 +1,12 @@
+import Meta from "../../components/Meta"
+
 const About = () => {
     return (
-        <div>About</div>
+        <>
+            <Meta title={`NextJS Movies App | About`} keywords={"about"}  description={"About page"}/>
+            <h1>About Page</h1>
+            <h3>Thank you for your time!</h3>
+        </>
     )
 }
 

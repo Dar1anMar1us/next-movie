@@ -5,21 +5,15 @@ import { useMoviesStore } from "../../store/store";
 const Movies = ({ movies }: { movies: any[] }) => {
     const { filter, filteredMovies, setFilter, searchGlobally } = useMoviesStore()
 
-    useMemo(() => {
-        useMoviesStore.getState().setMovies(movies)
-    }, [movies])
-
     useEffect(() => {
         if(filter.length === 0) useMoviesStore.getState().setMovies(movies)
     }, [filter])
-
-    // console.log(movies)
 
     return (
         <div>
             <div className="mb-12 flex items-center justify-between">
                 <input
-                    onChange={(e) => setFilter(e.target.value.trim().toLowerCase())}
+                    onChange={(e) => setFilter(e.target.value.toLowerCase())}
                     type="search"
                     value={filter}
                     className="block p-4 pl-10 focus:outline-none text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:border-blue-500"
