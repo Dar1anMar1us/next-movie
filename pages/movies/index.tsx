@@ -5,6 +5,10 @@ import { useMoviesStore } from "../../store/store";
 const Movies = ({ movies }: { movies: any[] }) => {
   const { filter, filteredMovies, setFilter, searchGlobally } = useMoviesStore();
 
+  useMemo(() => {
+    if(filter.length === 0) useMoviesStore.getState().setMovies(movies);
+  }, [])
+
   useEffect(() => {
     if(filter.length === 0) useMoviesStore.getState().setMovies(movies);
   }, [filter]);
@@ -20,7 +24,7 @@ const Movies = ({ movies }: { movies: any[] }) => {
           placeholder="Search..."
         />
         <button onClick={() => filter.length && searchGlobally()} type="button" className="text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 mr-2 mb-2">
-                    Search globally
+          Search globally
         </button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
